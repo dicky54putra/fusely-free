@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
-import Cta from "../components/moleculs/cta";
-import Footer from "../components/moleculs/footer";
-import Navbar from "../components/moleculs/navbar";
+import Cta from "../components/molecules/cta";
+import Footer from "../components/molecules/footer";
+import Navbar from "../components/molecules/navbar";
 import {
   Blog,
   Content,
   Hero,
   Partners,
   Plan,
-} from "../components/partials/homePage";
+} from "../components/organisms/homePage";
 
 const Home: NextPage = () => {
   return (
