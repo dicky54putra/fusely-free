@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { buttonClass } from "../StyleGuide";
 
 interface ButtonProps {
   text: string;
@@ -10,37 +11,48 @@ interface ButtonProps {
   isLink?: boolean;
   isDisabled?: boolean;
   href?: string;
+  children?: any;
+  className?: string;
 }
 
 const Button = (props: Partial<ButtonProps>) => {
   const {
     text = "Button",
     onClick,
-    variant,
+    variant = 'primary',
     type,
     size,
+    className,
     isDisabled,
     href = "/",
+    children,
     isLink,
   } = props;
 
+  const childText = children ?? text;
+  
+  const cls = buttonClass(className);
+
   const prop = {
     onClick: onClick,
-    className: "text-3xl font-bold underline ",
+    className: cls[variant],
+    type: type,
   };
 
+
   if (isDisabled) {
-    return <span {...prop}>{text}</span>;
+    return <span {...prop}>{childText}</span>;
   }
 
   if (isLink) {
     return (
       <Link href={href}>
-        <a {...prop}>{text}</a>
+        <a {...prop}>{childText}</a>
       </Link>
     );
   }
-  return <div>Button</div>;
+
+  return <button {...prop}>{childText}</button>;
 };
 
 export default Button;
