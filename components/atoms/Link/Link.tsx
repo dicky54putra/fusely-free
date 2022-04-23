@@ -3,13 +3,12 @@ import LinkDom from "next/link";
 import { typographyClass } from "../StyleGuide";
 import styles from "./Link.module.css";
 
-interface Link {
+interface LinkProps {
   children: any;
   href: string;
   className?: string;
 }
-
-const Link = (props: Partial<Link>) => {
+const Link = (props: LinkProps) => {
   const { children, href = "/", className } = props;
 
   const cls = typographyClass();

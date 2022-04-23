@@ -3,22 +3,20 @@ import React from "react";
 import { buttonClass } from "../StyleGuide";
 
 interface ButtonProps {
-  text: string;
   onClick?: (e: object) => void;
-  variant: "primary" | "outlined" | "white";
-  type: "submit" | "button";
+  variant?: "primary" | "outlined" | "white";
+  type?: "submit" | "button";
   isLink?: boolean;
   isDisabled?: boolean;
   href?: string;
-  children?: any;
+  children: any;
   className?: string;
 }
 
-const Button = (props: Partial<ButtonProps>) => {
+const Button = (props: ButtonProps) => {
   const {
-    text = "Button",
     onClick,
-    variant = 'primary',
+    variant = "primary",
     type,
     className,
     isDisabled,
@@ -27,8 +25,8 @@ const Button = (props: Partial<ButtonProps>) => {
     isLink,
   } = props;
 
-  const childText = children ?? text;
-  
+  const childText = children;
+
   const cls = buttonClass(className);
 
   const prop = {
