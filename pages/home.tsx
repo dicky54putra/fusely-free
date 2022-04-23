@@ -2,6 +2,7 @@ import React from 'react'
 
 import Button from 'components/atoms/Button'
 import Typography from 'components/atoms/Typography'
+import Link from 'components/atoms/Link'
 
 const home = () => {
   return (
@@ -20,6 +21,7 @@ const home = () => {
     <Typography component='p' variant='body2'>Children</Typography>
     <Typography component='small' variant='body3'>Children</Typography>
     <Typography component='div' variant='body4'>Children</Typography>
+    <Link>Tstst</Link>
     </>
   )
 }

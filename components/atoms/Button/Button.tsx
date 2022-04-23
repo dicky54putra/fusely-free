@@ -7,7 +7,6 @@ interface ButtonProps {
   onClick?: (e: object) => void;
   variant: "primary" | "outlined" | "white";
   type: "submit" | "button";
-  size?: "sm" | "md";
   isLink?: boolean;
   isDisabled?: boolean;
   href?: string;
@@ -21,7 +20,6 @@ const Button = (props: Partial<ButtonProps>) => {
     onClick,
     variant = 'primary',
     type,
-    size,
     className,
     isDisabled,
     href = "/",
@@ -38,7 +36,6 @@ const Button = (props: Partial<ButtonProps>) => {
     className: cls[variant],
     type: type,
   };
-
 
   if (isDisabled) {
     return <span {...prop}>{childText}</span>;
