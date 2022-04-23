@@ -52,7 +52,7 @@ const MenuManagement = () => {
         <MenuItem>Blog</MenuItem>
         <MenuItem>Contact</MenuItem>
       </div>
-      <div className="nav-cta absolute bottom-4 flex gap-4 lg:relative">
+      <div className="nav-cta absolute bottom-4 flex gap-4 lg:relative lg:bottom-0">
         <Button isLink href="/home" variant="outlined">
           Log in
         </Button>
