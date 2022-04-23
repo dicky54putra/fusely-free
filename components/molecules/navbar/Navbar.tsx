@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <div className="container px-4 lg:px-0 mt-4 lg:mt-10 flex justify-between items-center">
-      <div className="nav-logo z-[1]">
+      <div className="nav-logo z-50">
         <Logo />
       </div>
       {widthScreen > 1024 ? (
@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
       )}
       <div
-        className="nav-hamburger cursor-pointer z-[1] lg:hidden"
+        className="nav-hamburger cursor-pointer z-50 lg:hidden"
         onClick={handleClick}>
         {isOpen ? <CloseIcon /> : <HamburgerIcon />}
       </div>
