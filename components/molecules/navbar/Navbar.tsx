@@ -46,9 +46,11 @@ const MenuManagement = () => {
   return (
     <>
       <div className="nav-menus flex flex-col gap-9 lg:flex-row">
-        <MenuItem isActive>Home</MenuItem>
-        <MenuItem>Features</MenuItem>
-        <MenuItem>Pricing</MenuItem>
+        <MenuItem isActive href="/home">
+          Home
+        </MenuItem>
+        <MenuItem href="1">Features</MenuItem>
+        <MenuItem href="2">Pricing</MenuItem>
         <MenuItem>Blog</MenuItem>
         <MenuItem>Contact</MenuItem>
       </div>

@@ -7,7 +7,7 @@ interface MenuItem {
   href?: string;
   isActive?: boolean;
 }
-const MenuItem = (props: Partial<MenuItem>) => {
+const MenuItem = (props: MenuItem) => {
   const { children, href = "/", isActive } = props;
   const classActive = isActive
     ? ["text-neutral-500 after:bg-primary-300", styles.active].join(" ")
