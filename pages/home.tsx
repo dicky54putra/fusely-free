@@ -8,9 +8,9 @@ const home = () => {
   return (
     <>
     <div>home</div>
-    <Button isLink href='/' />
-    <Button isLink href='/' variant='outlined' />
-    <Button isLink href='/' variant='white' />
+    <Button isLink href='/'>sdf</Button>
+    <Button isLink href='/' variant='outlined' >sdf</Button>
+    <Button isLink href='/' variant='white' >sdf</Button>
     <Typography component='h1' variant='h1' className='okok' id="ookok" T='lk'>Children</Typography>
     <Typography component='h2' variant='h2'>Children</Typography>
     <Typography component='h3' variant='h3'>Children</Typography>
@@ -21,7 +21,7 @@ const home = () => {
     <Typography component='p' variant='body2'>Children</Typography>
     <Typography component='small' variant='body3'>Children</Typography>
     <Typography component='div' variant='body4'>Children</Typography>
-    <Link>Tstst</Link>
+    <Link href='/'>Tstst</Link>
     </>
   )
 }
