@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = {
     hero: {
+      image: "/images/hero-illustration.svg",
       title: "Let's get fusely together",
       desc: "Outcome-centered product that reduce churn, optimize pricing, and grow your subscription business end-to-end.",
       cta: [
@@ -36,34 +37,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       },
     ],
     examination: {
+      image: "/images/detailed-illustration.svg",
       title: "Detailed Examination",
       desc: "A daily dataset to keep you up to date on subscription market trends and what's happening in your vertical.",
-      cta: [
-        {
-          title: "Learn more",
-          url: "/",
-        },
-      ],
+      cta: {
+        title: "Learn more",
+        url: "/",
+      },
     },
     creativeSolution: {
+      image: "/images/creative-illustration.svg",
       title: "Creative Solutions",
       desc: "Creativity is our second name. We're full of inventive ideas and we're happy to present them to you.",
-      cta: [
-        {
-          title: "Learn more",
-          url: "/",
-        },
-      ],
+      cta: {
+        title: "Learn more",
+        url: "/",
+      },
     },
     professionalTeam: {
+      image: "/images/professional-illustration.svg",
       title: "Professional Team",
       desc: "Well, obviously, we're professionals. Don't hesitate - get to know us better.",
-      cta: [
-        {
-          title: "Learn more",
-          url: "/",
-        },
-      ],
+      cta: {
+        title: "Learn more",
+        url: "/",
+      },
     },
     chooseYourPlan: {
       title: "Choose your plan",

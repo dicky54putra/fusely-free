@@ -1,4 +1,4 @@
-import { CloseIcon, HamburgerIcon } from "components/atoms/icons";
+import { CloseIcon, HamburgerIcon } from "components/atoms/Icons";
 import Logo from "components/atoms/Logo";
 import React, { useEffect, useState } from "react";
 import Button from "../../atoms/Button";
@@ -49,8 +49,8 @@ const MenuManagement = () => {
         <MenuItem isActive href="/home">
           Home
         </MenuItem>
-        <MenuItem href="1">Features</MenuItem>
-        <MenuItem href="2">Pricing</MenuItem>
+        <MenuItem href="/1">Features</MenuItem>
+        <MenuItem href="/2">Pricing</MenuItem>
         <MenuItem>Blog</MenuItem>
         <MenuItem>Contact</MenuItem>
       </div>

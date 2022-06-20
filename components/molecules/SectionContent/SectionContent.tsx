@@ -3,19 +3,22 @@ import Link from "components/atoms/Link";
 import Typography from "components/atoms/Typography";
 import Image from "next/image";
 import React from "react";
+import SectionContentPlaceholder from "./SectionContentPlaceholder";
 
 interface SectionContentProps {
-  title: string;
-  desc: string;
-  href: string;
-  image: string;
+  title: string | undefined;
+  desc: string | undefined;
+  href: string | undefined;
+  image?: string;
   isReserve?: boolean;
 }
 const SectionContent = (props: SectionContentProps) => {
-  const { title, desc, href, image = "/", isReserve } = props;
+  const { title, desc, href = "/", image = "/", isReserve } = props;
 
   const cls =
     "container px-4 flex flex-col-reverse gap-[30px] my-[100px] items-center lg:px-12 lg:flex-row md:my-[140px] md:my-[220px] lg:gap-[180px]";
+
+  if (!title) return <SectionContentPlaceholder isReserve={isReserve} />;
   return (
     <div
       className={[cls, isReserve ? "lg:flex-row-reverse" : "lg:flex-row"].join(
