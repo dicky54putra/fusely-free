@@ -1,33 +1,6 @@
 import React from "react";
-import { typographyClass } from "../StyleGuide";
-
-interface TypographyProps {
-  children: any;
-  className?: string;
-  variant?:
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "body1"
-    | "body2"
-    | "body3"
-    | "body4";
-  component?:
-    | "p"
-    | "div"
-    | "span"
-    | "small"
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6";
-  [key: string]: any;
-}
+import { TypographyClass } from "utils/StyleGuide/Typography";
+import { TypographyProps } from "./TypographyType";
 
 const Typography = (props: TypographyProps) => {
   const {
@@ -38,7 +11,7 @@ const Typography = (props: TypographyProps) => {
     ...another
   } = props;
 
-  const cls = typographyClass(className);
+  const cls = TypographyClass(className);
 
   const prop = {
     className: cls[variant],

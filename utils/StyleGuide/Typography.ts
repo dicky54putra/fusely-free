@@ -1,4 +1,4 @@
-const typographyClass = (props?: string) => {
+export const TypographyClass = (props?: string) => {
   const data = {
     h1: [
       "sm:text-h1 sm:leading-h1 font-serif text-h1sm font-bold leading-h1sm",
@@ -21,23 +21,3 @@ const typographyClass = (props?: string) => {
   };
   return data;
 };
-
-const buttonClass = (className?: string) => {
-  const data = {
-    primary: [
-      "rounded-sm py-4 px-8 bg-primary-500 text-[14px] text-white font-bold font-sans box-border border border-primary-500",
-      className,
-    ].join(" "),
-    outlined: [
-      "rounded-sm py-4 px-8 bg-transparent text-[14px] text-primary-500 font-bold font-sans box-border border border-primary-500",
-      className,
-    ].join(" "),
-    white: [
-      "rounded-sm py-4 px-8 bg-transparent text-[14px] text-primary-500 font-bold font-sans box-border border border-white",
-      className,
-    ].join(" "),
-  };
-  return data;
-};
-
-export { typographyClass, buttonClass };

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { buttonClass } from "../StyleGuide";
+import { ButtonClass } from "utils/StyleGuide/Button";
 
 interface ButtonProps {
   onClick?: (e: object) => void;
@@ -27,7 +27,7 @@ const Button = (props: ButtonProps) => {
 
   const childText = children;
 
-  const cls = buttonClass(className);
+  const cls = ButtonClass(className);
 
   const prop = {
     onClick: onClick,

@@ -1,7 +1,7 @@
 import React from "react";
 import LinkDom from "next/link";
-import { typographyClass } from "../StyleGuide";
 import styles from "./Link.module.css";
+import { TypographyClass } from "utils/StyleGuide/Typography";
 
 interface LinkProps {
   children: any;
@@ -11,7 +11,7 @@ interface LinkProps {
 const Link = (props: LinkProps) => {
   const { children, href = "/", className } = props;
 
-  const cls = typographyClass();
+  const cls = TypographyClass();
   const classNames = [cls["body4"], "relative", styles.after, className].join(
     " ",
   );
