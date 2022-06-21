@@ -16,7 +16,7 @@ export const TypographyClass = (props?: string) => {
     body2: ["font-sans text-body2 font-normal leading-body-2", props].join(" "),
     body3: ["font-sans text-body3 font-normal leading-body-3", props].join(" "),
     body4: ["font-sans text-body2 font-semibold leading-body-4", props].join(
-      " ",
+      " "
     ),
   };
   return data;

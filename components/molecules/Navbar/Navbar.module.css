@@ -1,33 +1,15 @@
 .nav-wrapper {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background: white;
-  inset: 0;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(100%);
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-  transition-delay: 0.3s;
-  z-index: 49;
+  @apply flex fixed flex-col text-center bg-white overflow-hidden inset-0 justify-center items-center -translate-x-full opacity-0 transition-all delay-300 z-40;
 }
 
 .nav-wrapper.active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 0.3s ease-in-out;
+  @apply opacity-100 translate-x-0 transition-all;
 }
 
 .nav-wrapper > div {
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
+  @apply opacity-100 transition-all;
 }
 
 .nav-wrapper.active > div {
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
-  transition-delay: 0.3s;
+  @apply opacity-100 transition-all delay-300;
 }

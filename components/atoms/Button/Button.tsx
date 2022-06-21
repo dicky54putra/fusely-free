@@ -2,14 +2,15 @@ import Link from "next/link";
 import React from "react";
 import { ButtonClass } from "utils/StyleGuide/Button";
 
-interface ButtonProps {
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLSpanElement> {
   onClick?: (e: object) => void;
   variant?: "primary" | "outlined" | "white";
   type?: "submit" | "button";
   isLink?: boolean;
   isDisabled?: boolean;
   href?: string;
-  children: any;
+  children: React.ReactNode;
   className?: string;
 }
 
@@ -23,6 +24,7 @@ const Button = (props: ButtonProps) => {
     href = "/",
     children,
     isLink,
+    ...another
   } = props;
 
   const childText = children;
@@ -33,6 +35,7 @@ const Button = (props: ButtonProps) => {
     onClick: onClick,
     className: cls[variant],
     type: type,
+    ...another,
   };
 
   if (isDisabled) {
